@@ -127,7 +127,7 @@ export default function Experience() {
                     </div>
                   </div>
                   {exp.achievements && (
-                    <ul className="space-y-2 mt-4">
+                    <ul className="space-y-2 mt-4 text-left">
                       {exp.achievements.split('\n').filter(Boolean).map((item, i) => (
                         <li
                           key={i}
