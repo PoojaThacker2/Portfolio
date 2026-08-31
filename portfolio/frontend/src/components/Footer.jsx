@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaHeart } from 'react-icons/fa';
-import { fetchProfile, fetchSocialLinks } from '../services/api';
+import { HiMail, HiCode } from 'react-icons/hi';
+import { fetchProfile, fetchSocialLinks, apiDocsUrl } from '../services/api';
 import { useState, useEffect } from 'react';
 
 export default function Footer() {
@@ -28,7 +29,7 @@ export default function Footer() {
               {profile?.name || 'Pooja Chande'}
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-              {profile?.tagline || 'Backend-heavy Full Stack Python Developer'}
+              {profile?.tagline || 'Senior Python Backend Engineer'}
             </p>
           </div>
 
@@ -45,14 +46,32 @@ export default function Footer() {
                 {getSocialIcon(link.icon) || link.icon}
               </a>
             ))}
+            {profile?.email && (
+              <a
+                href={`mailto:${profile.email}`}
+                className="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-all"
+                aria-label="Email"
+              >
+                <HiMail className="w-5 h-5" />
+              </a>
+            )}
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800 text-center">
+        <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800 text-center space-y-3">
+          <a
+            href={apiDocsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-600 dark:text-primary-400 hover:underline"
+          >
+            <HiCode className="w-4 h-4" />
+            This portfolio is powered by a Django REST API — explore the docs →
+          </a>
           <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center justify-center gap-1">
             &copy; {new Date().getFullYear()} {profile?.name || 'Pooja Chande'}. Built with
             <FaHeart className="w-3.5 h-3.5 text-red-500 mx-0.5" />
-            using React & Django
+            using React, Django REST Framework and Python.
           </p>
         </div>
       </div>

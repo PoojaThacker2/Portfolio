@@ -97,6 +97,20 @@ if extra_cors_origins:
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 
+# Django 4+ requires the admin's own host (and any other host serving forms)
+# to be explicitly trusted for CSRF once served over HTTPS behind a proxy
+# (PythonAnywhere terminates TLS in front of the app) — derived from
+# ALLOWED_HOSTS so there's one source of truth instead of a second list to
+# keep in sync.
+CSRF_TRUSTED_ORIGINS = [
+    f'https://{host}' for host in ALLOWED_HOSTS
+    if host not in ('localhost', '127.0.0.1', '*')
+]
+
+if not DEBUG:
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',

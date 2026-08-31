@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import EngineeringSnapshot from './components/EngineeringSnapshot';
 import About from './components/About';
+import Specialization from './components/Specialization';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -32,11 +34,13 @@ function App() {
       <Navbar />
       <main>
         <section id="hero"><Hero /></section>
+        <EngineeringSnapshot />
         <section id="about"><About /></section>
-        <section id="skills"><Skills /></section>
-        <section id="experience"><Experience /></section>
-        <section id="projects"><Projects /></section>
+        <section id="specialization"><Specialization /></section>
         <section id="case-studies"><CaseStudies /></section>
+        <section id="projects"><Projects /></section>
+        <section id="experience"><Experience /></section>
+        <section id="skills"><Skills /></section>
         <section id="github"><GitHubSection /></section>
         <section id="testimonials"><Testimonials /></section>
         <section id="contact"><Contact /></section>

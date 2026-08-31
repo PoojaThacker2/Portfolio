@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { HiDownload, HiEye, HiMail } from 'react-icons/hi';
+import { HiDownload, HiMail } from 'react-icons/hi';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { fetchProfile, fetchSocialLinks } from '../services/api';
 
@@ -68,74 +68,44 @@ export default function Hero() {
         className="section-container relative z-10 w-full"
       >
         <div className="max-w-3xl">
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-3 mb-6">
-            <span className="badge">Backend Developer</span>
-            <span className="badge">Python Expert</span>
-            <span className="badge">AI Enthusiast</span>
-          </motion.div>
+          <motion.p
+            variants={itemVariants}
+            className="text-base font-medium text-gray-500 dark:text-gray-400 mb-3"
+          >
+            {profile?.name || 'Pooja Chande'}
+          </motion.p>
 
           <motion.h1
             variants={itemVariants}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-4"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5"
           >
-            Hi, I'm{' '}
-            <span className="gradient-text">
-              {profile?.name || 'Pooja Chande'}
-            </span>
+            <span className="gradient-text">Senior Python Backend Engineer</span>
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="text-xl sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mb-3"
+            className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-6 max-w-xl leading-relaxed"
           >
-            {profile?.tagline || 'Backend-heavy Full Stack Python Developer'}
+            {profile?.summary || 'Building scalable APIs, microservices and production-grade backend systems with Python.'}
           </motion.p>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-primary-600 dark:text-primary-400 font-mono font-medium mb-4"
+            className="text-sm font-mono text-primary-600 dark:text-primary-400 mb-8 tracking-tight"
           >
-            {profile?.experience_years || '4.7+ Years Experience'}
+            Python · Django · FastAPI · REST APIs · PostgreSQL · Redis · Celery · Docker
           </motion.p>
 
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl leading-relaxed"
-          >
-            {profile?.summary || 'Building scalable backend systems using Python, Django, FastAPI and PostgreSQL.'}
-          </motion.p>
-
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-            {resumeUrl ? (
-              <a
-                href={resumeUrl}
-                download
-                className="btn-primary group"
-              >
-                <HiDownload className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
-                Download Resume
-              </a>
-            ) : (
-              <button
-                type="button"
-                disabled
-                className="btn-primary group opacity-50 cursor-not-allowed"
-                title="Resume coming soon"
-              >
-                <HiDownload className="w-5 h-5" />
-                Resume Coming Soon
-              </button>
-            )}
+          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4">
             <a
-              href="#projects"
+              href="#case-studies"
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+                document.querySelector('#case-studies')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="btn-outline"
+              className="btn-primary"
             >
-              <HiEye className="w-5 h-5" />
-              View Projects
+              View Case Studies
             </a>
             <a
               href="#contact"
@@ -148,9 +118,7 @@ export default function Hero() {
               <HiMail className="w-5 h-5" />
               Contact Me
             </a>
-          </motion.div>
 
-          <motion.div variants={itemVariants} className="flex gap-4 mt-8">
             {socialLinks.map((link) => (
               <a
                 key={link.platform}
@@ -163,6 +131,17 @@ export default function Hero() {
                 {getSocialIcon(link.icon) || link.icon}
               </a>
             ))}
+
+            {resumeUrl && (
+              <a
+                href={resumeUrl}
+                download
+                className="flex items-center gap-1.5 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >
+                <HiDownload className="w-4 h-4" />
+                Resume
+              </a>
+            )}
           </motion.div>
         </div>
       </motion.div>

@@ -85,7 +85,12 @@ export default function Projects() {
 
             <h3 className="text-xl font-bold mb-1">{project.title}</h3>
             {project.subtitle && (
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">{project.subtitle}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{project.subtitle}</p>
+            )}
+            {project.description && (
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                {project.description}
+              </p>
             )}
 
             <ul className="space-y-2 mb-6 flex-1">

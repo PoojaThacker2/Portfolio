@@ -1,10 +1,16 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { HiStar } from 'react-icons/hi';
+import { motion, AnimatePresence } from 'framer-motion';
+import { HiStar, HiChevronDown, HiChevronUp } from 'react-icons/hi';
 import { fetchTestimonials } from '../services/api';
+
+// Prioritized for testimonials that speak most directly to technical
+// ability, ownership, architecture and mentoring — shown prominently by
+// default, with the rest available via "Show More".
+const PROMINENT_NAMES = ['Upinderjit Singh Chopra', 'Archana Subramaniyam', 'Tabish Chauhan'];
 
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     fetchTestimonials().then(setTestimonials).catch(() => {});
@@ -77,7 +83,58 @@ export default function Testimonials() {
     },
   ];
 
-  const displayTestimonials = testimonials.length > 0 ? testimonials : defaultTestimonials;
+  const allTestimonials = testimonials.length > 0 ? testimonials : defaultTestimonials;
+  const prominent = allTestimonials.filter((t) => PROMINENT_NAMES.includes(t.name));
+  const rest = allTestimonials.filter((t) => !PROMINENT_NAMES.includes(t.name));
+  // Fall back to the first 3 if none of the prioritized names are present
+  // (e.g. testimonial content changes in the admin over time).
+  const featured = prominent.length > 0 ? prominent : allTestimonials.slice(0, 3);
+  const remaining = prominent.length > 0 ? rest : allTestimonials.slice(3);
+
+  const TestimonialCard = ({ testimonial, index }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="card relative"
+    >
+      <div className="flex items-center gap-1 mb-4">
+        {[...Array(5)].map((_, i) => (
+          <HiStar
+            key={i}
+            className={`w-5 h-5 ${
+              i < testimonial.rating
+                ? 'text-yellow-400'
+                : 'text-gray-200 dark:text-gray-700'
+            }`}
+          />
+        ))}
+      </div>
+
+      <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 italic">
+        "{testimonial.content}"
+      </p>
+
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 font-bold text-sm">
+          {testimonial.name.split(' ').map(n => n[0]).join('')}
+        </div>
+        <div>
+          <p className="font-semibold text-sm">{testimonial.name}</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">
+            {testimonial.title}{testimonial.company ? `, ${testimonial.company}` : ''}
+          </p>
+        </div>
+      </div>
+
+      <div className="absolute top-0 right-0 -mt-2 -mr-2 w-16 h-16 text-primary-200 dark:text-primary-800 opacity-50">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+        </svg>
+      </div>
+    </motion.div>
+  );
 
   return (
     <div className="section-container">
@@ -95,53 +152,46 @@ export default function Testimonials() {
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        {displayTestimonials.map((testimonial, index) => (
-          <motion.div
-            key={testimonial.name}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="card relative"
-          >
-            <div className="flex items-center gap-1 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <HiStar
-                  key={i}
-                  className={`w-5 h-5 ${
-                    i < testimonial.rating
-                      ? 'text-yellow-400'
-                      : 'text-gray-200 dark:text-gray-700'
-                  }`}
-                />
-              ))}
-            </div>
-
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 italic">
-              "{testimonial.content}"
-            </p>
-
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 font-bold text-sm">
-                {testimonial.name.split(' ').map(n => n[0]).join('')}
-              </div>
-              <div>
-                <p className="font-semibold text-sm">{testimonial.name}</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  {testimonial.title}{testimonial.company ? `, ${testimonial.company}` : ''}
-                </p>
-              </div>
-            </div>
-
-            <div className="absolute top-0 right-0 -mt-2 -mr-2 w-16 h-16 text-primary-200 dark:text-primary-800 opacity-50">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-            </div>
-          </motion.div>
+      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {featured.map((testimonial, index) => (
+          <TestimonialCard key={testimonial.name} testimonial={testimonial} index={index} />
         ))}
       </div>
+
+      {remaining.length > 0 && (
+        <>
+          <AnimatePresence>
+            {showAll && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden max-w-5xl mx-auto"
+              >
+                <div className="grid md:grid-cols-3 gap-6 mt-6">
+                  {remaining.map((testimonial, index) => (
+                    <TestimonialCard key={testimonial.name} testimonial={testimonial} index={index} />
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <div className="text-center mt-10">
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="btn-outline inline-flex"
+            >
+              {showAll ? (
+                <>Show Less <HiChevronUp className="w-4 h-4" /></>
+              ) : (
+                <>Show {remaining.length} More Testimonials <HiChevronDown className="w-4 h-4" /></>
+              )}
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 }

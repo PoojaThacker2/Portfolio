@@ -1,0 +1,860 @@
+[
+{
+  "model": "portfolio.skillcategory",
+  "pk": 2,
+  "fields": {
+    "name": "Databases",
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.skillcategory",
+  "pk": 4,
+  "fields": {
+    "name": "Frontend",
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.skillcategory",
+  "pk": 7,
+  "fields": {
+    "name": "Backend & Frameworks",
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.skillcategory",
+  "pk": 8,
+  "fields": {
+    "name": "Cloud & DevOps",
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.skillcategory",
+  "pk": 9,
+  "fields": {
+    "name": "Data & ML",
+    "order": 4
+  }
+},
+{
+  "model": "portfolio.skillcategory",
+  "pk": 10,
+  "fields": {
+    "name": "Testing & Quality",
+    "order": 5
+  }
+},
+{
+  "model": "portfolio.skillcategory",
+  "pk": 11,
+  "fields": {
+    "name": "Tools & Collaboration",
+    "order": 6
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 6,
+  "fields": {
+    "category": 2,
+    "name": "PostgreSQL",
+    "proficiency": 90,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 7,
+  "fields": {
+    "category": 2,
+    "name": "MySQL",
+    "proficiency": 80,
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 14,
+  "fields": {
+    "category": 4,
+    "name": "Vue.js",
+    "proficiency": 65,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 17,
+  "fields": {
+    "category": 4,
+    "name": "JavaScript",
+    "proficiency": 75,
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 27,
+  "fields": {
+    "category": 7,
+    "name": "Python",
+    "proficiency": 80,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 28,
+  "fields": {
+    "category": 7,
+    "name": "Django",
+    "proficiency": 80,
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 29,
+  "fields": {
+    "category": 7,
+    "name": "Django REST Framework (DRF)",
+    "proficiency": 80,
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 30,
+  "fields": {
+    "category": 7,
+    "name": "FastAPI",
+    "proficiency": 80,
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 31,
+  "fields": {
+    "category": 7,
+    "name": "REST APIs",
+    "proficiency": 80,
+    "order": 4
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 32,
+  "fields": {
+    "category": 7,
+    "name": "Microservices",
+    "proficiency": 80,
+    "order": 5
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 33,
+  "fields": {
+    "category": 7,
+    "name": "API Integration",
+    "proficiency": 80,
+    "order": 6
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 34,
+  "fields": {
+    "category": 7,
+    "name": "Celery",
+    "proficiency": 80,
+    "order": 7
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 35,
+  "fields": {
+    "category": 7,
+    "name": "Celery Beat",
+    "proficiency": 80,
+    "order": 8
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 36,
+  "fields": {
+    "category": 7,
+    "name": "Redis",
+    "proficiency": 80,
+    "order": 9
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 37,
+  "fields": {
+    "category": 4,
+    "name": "Vuex",
+    "proficiency": 80,
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 38,
+  "fields": {
+    "category": 4,
+    "name": "Vue Router",
+    "proficiency": 80,
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 39,
+  "fields": {
+    "category": 4,
+    "name": "HTML5",
+    "proficiency": 80,
+    "order": 4
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 40,
+  "fields": {
+    "category": 4,
+    "name": "CSS3",
+    "proficiency": 80,
+    "order": 5
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 41,
+  "fields": {
+    "category": 4,
+    "name": "Bootstrap Vue",
+    "proficiency": 80,
+    "order": 6
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 42,
+  "fields": {
+    "category": 4,
+    "name": "React",
+    "proficiency": 80,
+    "order": 7
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 43,
+  "fields": {
+    "category": 2,
+    "name": "SQL",
+    "proficiency": 80,
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 44,
+  "fields": {
+    "category": 2,
+    "name": "SQLAlchemy",
+    "proficiency": 80,
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 45,
+  "fields": {
+    "category": 2,
+    "name": "Alembic",
+    "proficiency": 80,
+    "order": 4
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 46,
+  "fields": {
+    "category": 8,
+    "name": "AWS EC2",
+    "proficiency": 80,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 47,
+  "fields": {
+    "category": 8,
+    "name": "AWS Lambda",
+    "proficiency": 80,
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 48,
+  "fields": {
+    "category": 8,
+    "name": "AWS SageMaker",
+    "proficiency": 80,
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 49,
+  "fields": {
+    "category": 8,
+    "name": "Docker",
+    "proficiency": 80,
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 50,
+  "fields": {
+    "category": 8,
+    "name": "Kubernetes",
+    "proficiency": 80,
+    "order": 4
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 51,
+  "fields": {
+    "category": 8,
+    "name": "Jenkins",
+    "proficiency": 80,
+    "order": 5
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 52,
+  "fields": {
+    "category": 8,
+    "name": "CI/CD",
+    "proficiency": 80,
+    "order": 6
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 53,
+  "fields": {
+    "category": 8,
+    "name": "Kafka",
+    "proficiency": 80,
+    "order": 7
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 54,
+  "fields": {
+    "category": 8,
+    "name": "Nginx",
+    "proficiency": 80,
+    "order": 8
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 55,
+  "fields": {
+    "category": 9,
+    "name": "Pandas",
+    "proficiency": 80,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 56,
+  "fields": {
+    "category": 9,
+    "name": "NumPy",
+    "proficiency": 80,
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 57,
+  "fields": {
+    "category": 9,
+    "name": "Scikit-learn",
+    "proficiency": 80,
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 58,
+  "fields": {
+    "category": 9,
+    "name": "OpenCV",
+    "proficiency": 80,
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 59,
+  "fields": {
+    "category": 10,
+    "name": "Pytest",
+    "proficiency": 80,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 60,
+  "fields": {
+    "category": 10,
+    "name": "Unit Testing",
+    "proficiency": 80,
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 61,
+  "fields": {
+    "category": 10,
+    "name": "Code Review",
+    "proficiency": 80,
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 62,
+  "fields": {
+    "category": 10,
+    "name": "OWASP Security Standards",
+    "proficiency": 80,
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 63,
+  "fields": {
+    "category": 11,
+    "name": "Agile",
+    "proficiency": 80,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 64,
+  "fields": {
+    "category": 11,
+    "name": "Git",
+    "proficiency": 80,
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 65,
+  "fields": {
+    "category": 11,
+    "name": "GitHub",
+    "proficiency": 80,
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 66,
+  "fields": {
+    "category": 11,
+    "name": "GitLab",
+    "proficiency": 80,
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 67,
+  "fields": {
+    "category": 11,
+    "name": "JIRA",
+    "proficiency": 80,
+    "order": 4
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 68,
+  "fields": {
+    "category": 11,
+    "name": "Postman",
+    "proficiency": 80,
+    "order": 5
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 69,
+  "fields": {
+    "category": 11,
+    "name": "Swagger/OpenAPI",
+    "proficiency": 80,
+    "order": 6
+  }
+},
+{
+  "model": "portfolio.skill",
+  "pk": 70,
+  "fields": {
+    "category": 11,
+    "name": "Mentoring",
+    "proficiency": 80,
+    "order": 7
+  }
+},
+{
+  "model": "portfolio.experience",
+  "pk": 1,
+  "fields": {
+    "title": "Senior Python Developer",
+    "company": "MSBC Group",
+    "location": "Ahmedabad, Gujarat",
+    "start_date": "2025-08-01",
+    "end_date": "2026-05-31",
+    "current": false,
+    "description": "",
+    "achievements": "Owned end-to-end backend development for a multi-tenant hospitality platform built on Django microservices architecture, independently delivering 5 production-grade microservices and 70+ REST APIs\nDesigned and developed scalable microservices for authentication, hotel operations, notifications, workflow automation, and API integrations, ensuring secure tenant isolation and maintainable architecture\nEngineered asynchronous processing using Celery, Celery Beat, Redis, and Kafka to automate weather integrations, notifications, and scheduled workflows\nManaged QA and production deployment support with Jenkins across Kubernetes-based QA environments and AWS EC2 production servers, including troubleshooting, deployment validation, and issue resolution\nEnforced OWASP security standards, optimized backend performance, collaborated with AI engineers to integrate chatbot services via REST APIs, and built CLI scaffolding tools for Django/FastAPI to accelerate engineering productivity",
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.experience",
+  "pk": 2,
+  "fields": {
+    "title": "Solution Developer",
+    "company": "Innovya Technologies",
+    "location": "US (Remote)",
+    "start_date": "2023-04-01",
+    "end_date": "2025-06-30",
+    "current": false,
+    "description": "",
+    "achievements": "Owned the Facilities, Chains, Services, Appeals, and Cases modules end-to-end on RevKeep, a US healthcare audit and monitoring platform — building reusable Vue.js components with Vuex for state management, Vue Router for navigation, and props/emit plus provide/inject for component communication\nWorked across both Options API (legacy modules) and Composition API (modernized modules) while contributing to backend modernization of RevKeep's legacy CakePHP application, designing and deploying 30+ REST APIs using FastAPI and Django REST Framework\nIntegrated machine learning models into backend applications through scalable REST APIs, reducing prediction latency by 40% while supporting production business workflows\nImproved code quality by refactoring legacy codebases and raising test coverage by 25% through modularization and Pytest-based unit testing; maintained GitHub repositories and CI/CD pipeline configuration\nBuilt a US financial-market prediction application with Python-based data visualization interfaces; collaborated with frontend and cross-functional teams to deliver end-to-end product features in Agile environments",
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.experience",
+  "pk": 4,
+  "fields": {
+    "title": "Python Developer",
+    "company": "Arkay Apps",
+    "location": "Kutch, Gujarat",
+    "start_date": "2022-01-01",
+    "end_date": "2023-03-31",
+    "current": false,
+    "description": "",
+    "achievements": "Developed scalable backend applications using Django and FastAPI, delivering CRUD APIs for web and mobile platforms with optimized database performance\nBuilt 10+ modular API modules using FastAPI and SQLAlchemy ORM, integrating third-party services (email, SMS, payments) across construction/property, trust/event, and maritime-industry workflows\nOptimized PostgreSQL/MySQL queries and ORM models, reducing database call time by 30%; implemented JWT authentication, role/operation-level authorization, and Alembic migrations\nWrote and maintained technical documentation for internal APIs and data workflows; conducted peer code reviews and mentored junior developers on Django best practices and Git workflows",
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.experience",
+  "pk": 5,
+  "fields": {
+    "title": "Assistant Professor",
+    "company": "KSKV Kachchh University",
+    "location": "Kutch, Gujarat",
+    "start_date": "2014-02-01",
+    "end_date": "2021-07-31",
+    "current": false,
+    "description": "",
+    "achievements": "Delivered undergraduate courses in Python, C++, DBMS, Networking, and Software Engineering; mentored 3,000+ students and guided 20+ full-stack/Python academic projects\nServed as Head of Department (BCA), managing academic operations, examinations, and professional development for 300+ students",
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 4,
+  "fields": {
+    "title": "AI-Based Real Estate Valuation System",
+    "subtitle": "ML-Powered Property Price Predictor",
+    "description": "A Django-based prediction system estimating property values from location, area, materials, and cost parameters.",
+    "highlights": "Built a Django-based prediction system estimating property values from location, area, materials, and cost parameters\nApplied feature engineering with Pandas, StandardScaler, and PolynomialFeatures; evaluated Random Forest, SVR, Ridge, Lasso, and KNN models\nIntegrated the ML workflow with Django ORM and REST APIs for application-level valuation predictions",
+    "technologies": "Python, Django, PostgreSQL, Scikit-learn, Pandas",
+    "github_url": "",
+    "live_url": "",
+    "image": "",
+    "featured": true,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 5,
+  "fields": {
+    "title": "Temple Trust, Events & Resource Management Platform",
+    "subtitle": "Trust & Membership Operations Backend",
+    "description": "Backend services covering trusts, trustees, memberships, services, donations, and operational resources, with a React frontend.",
+    "highlights": "Developed backend services covering trusts, trustees, memberships, services, donations, and operational resources\nBuilt REST APIs with FastAPI and SQLAlchemy for CRUD, search, filtering, pagination, and sorting; implemented JWT auth and role-based authorization\nAdded document/media handling and PDF generation, supporting a React frontend via REST APIs",
+    "technologies": "Python, FastAPI, SQLAlchemy, MySQL, Alembic, React",
+    "github_url": "",
+    "live_url": "",
+    "image": "",
+    "featured": true,
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 6,
+  "fields": {
+    "title": "Image-Based Painting Recommendation System (SOAL)",
+    "subtitle": "CNN-Powered Artwork Similarity Engine",
+    "description": "An image-similarity recommendation system for an artwork marketplace using CNN-based image feature analysis.",
+    "highlights": "Contributed to backend development of an image-similarity recommendation system for an artwork marketplace using CNN-based image feature analysis\nDeveloped and deployed serverless APIs on AWS Lambda, supporting model inference workflows via AWS SageMaker",
+    "technologies": "Python, CNN, AWS SageMaker, AWS Lambda",
+    "github_url": "",
+    "live_url": "",
+    "image": "",
+    "featured": true,
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 7,
+  "fields": {
+    "title": "US Capital Market Prediction Application",
+    "subtitle": "Financial Market Visualization Suite",
+    "description": "Python desktop and web interfaces for a US financial-market prediction application, including candlestick-chart visualizations of market data.",
+    "highlights": "Built Python desktop and web interfaces for a US financial-market prediction application, including candlestick-chart visualizations of market data\nExplored multiple Python GUI/visualization frameworks (Tkinter, PyQt, Kivy, Streamlit) to prototype and compare data-presentation approaches",
+    "technologies": "Python, Tkinter, PyQt, Kivy, Streamlit",
+    "github_url": "",
+    "live_url": "",
+    "image": "",
+    "featured": true,
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.casestudy",
+  "pk": 1,
+  "fields": {
+    "title": "How I Optimized Django APIs for High Traffic",
+    "slug": "optimize-django-apis",
+    "excerpt": "Techniques to reduce API response times by 60% using select_related, prefetch_related, and database indexing.",
+    "content": "## The Problem\n\nOur hotel management platform faced slow API responses under load. Some endpoints took over 3 seconds to respond.\n\n## The Solution\n\n1. **N+1 Query Optimization**: Used select_related and prefetch_related\n2. **Database Indexing**: Added composite indexes on frequently queried fields\n3. **Redis Caching**: Cached expensive query results\n4. **Pagination**: Implemented cursor-based pagination\n\n## Results\n\nAverage response time dropped from 3.2s to 0.4s (87% improvement).",
+    "technologies": "Django, PostgreSQL, Redis",
+    "published_date": "2026-07-06",
+    "featured": true,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.casestudy",
+  "pk": 2,
+  "fields": {
+    "title": "Redis Caching Strategy for Microservices",
+    "slug": "redis-caching-microservices",
+    "excerpt": "Implementing a distributed caching layer across multiple Django services.",
+    "content": "## Architecture\n\nImplemented Redis as a shared caching layer across 5 Django microservices.\n\n## Cache Strategies\n\n1. **Cache-Aside**: Application checks cache before DB\n2. **Write-Through**: Updates invalidate cache entries\n3. **TTL Management**: Configurable expiration per data type\n\n## Impact\n\nReduced database load by 70% and improved API response times by 65%.",
+    "technologies": "Redis, Django, Docker",
+    "published_date": "2026-07-06",
+    "featured": true,
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.casestudy",
+  "pk": 3,
+  "fields": {
+    "title": "Building Celery for Background Job Processing",
+    "slug": "celery-background-jobs",
+    "excerpt": "Designing a robust task queue for async email, report generation, and data processing.",
+    "content": "## Requirements\n\nHandle email notifications, report generation, and data synchronization asynchronously.\n\n## Implementation\n\n1. **Celery + Redis**: Message broker setup\n2. **Task Queues**: Separate queues for different priorities\n3. **Periodic Tasks**: Celery Beat for scheduled jobs\n4. **Monitoring**: Flower for task monitoring\n\n## Outcomes\n\nZero blocking on API endpoints for background operations.",
+    "technologies": "Celery, Redis, Django, Docker",
+    "published_date": "2026-07-06",
+    "featured": true,
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 3,
+  "fields": {
+    "name": "Randhir Kumar",
+    "title": "Software Developer",
+    "company": "Innovya Technologies",
+    "avatar": "",
+    "content": "I had the pleasure of working with Pooja Chande at Innovya, and she consistently impressed me with her strong technical skills and proactive approach. Pooja not only brought deep expertise in Python and related tools but also showed remarkable initiative in improving processes and taking full ownership of her work.",
+    "rating": 5,
+    "featured": true,
+    "created_date": "2026-08-20",
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 4,
+  "fields": {
+    "name": "Tabish Chauhan",
+    "title": "Senior Python Developer - GenAI",
+    "company": "Innovya Technologies",
+    "avatar": "",
+    "content": "I had the pleasure of working with Pooja Chande at Innovya Technologies, where she consistently took full ownership of her tasks, especially in Python development and backend integration. Her ability to independently drive features from planning to execution was impressive. Pooja's proactive mindset, clean coding practices, and readiness to support others made her a true asset to our team.",
+    "rating": 5,
+    "featured": true,
+    "created_date": "2026-08-20",
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 5,
+  "fields": {
+    "name": "Upinderjit Singh Chopra",
+    "title": "Business Intelligence & Data Strategy Leader",
+    "company": "Innovya Technologies",
+    "avatar": "",
+    "content": "I’ve had the pleasure of working with Pooja Chande at Innovya Technologies, and she stands out as a truly exceptional Solution Developer. Pooja brings deep expertise in Python, Django, FastAPI, and front-end development with Vue.js, backed by strong database skills across MySQL, PostgreSQL, and MS SQL Server. What makes her truly unique is her ability to bridge technical excellence with clear and confident communication. Her curiosity, structured thinking, and collaborative spirit make her a joy to work with. Pooja consistently delivers high-quality solutions while also mentoring and uplifting those around her — a true asset to any team.",
+    "rating": 5,
+    "featured": true,
+    "created_date": "2026-08-20",
+    "order": 2
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 6,
+  "fields": {
+    "name": "Saloni Bhatnagar",
+    "title": "Senior US Recruiter",
+    "company": "Innovya Technologies",
+    "avatar": "",
+    "content": "I had the opportunity to bring Pooja on board and worked with her closely. From the start, she stood out for her adaptability and ownership mindset. Whether it was picking up new responsibilities or switching between roles across multiple projects, she approached everything with a learning mindset and a strong sense of accountability.\n\nHer willingness to take on unfamiliar tasks, learn quickly, and deliver effectively is truly commendable. She brings maturity to the table and handles situations with professionalism and clarity, which makes her a reliable team player.\n\nWhile her technical skills are developing well, it’s her curiosity, dedication, and eagerness to grow that truly set her apart. She would definitely be a great addition to any team.",
+    "rating": 5,
+    "featured": true,
+    "created_date": "2026-08-20",
+    "order": 3
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 7,
+  "fields": {
+    "name": "Archana Subramaniyam",
+    "title": "Senior Technical Consultant / Module Lead",
+    "company": "Innovya Technologies",
+    "avatar": "",
+    "content": "I am happy to recommend Pooja Chande for her outstanding contribution as a developer in the field of Information Technology. It’s been a pleasure collaborating closely with Pooja Chande at Innovya Technologies, and throughout our time together, I've consistently been impressed by her expertise, professionalism, and dedication to her craft.\n\nPooja Chande is a highly skilled developer with a knack for turning complex ideas into elegant solutions. Her proficiency spans across various programming languages, frameworks, and technologies, including technologies like Python, JavaScript, React.js. Whether it's building robust web applications, designing efficient algorithms, or troubleshooting intricate bugs, Pooja Chande approaches each task with precision and creativity.\n\nIn addition to her technical prowess, Pooja Chande is also an exceptional team player and collaborator. She thrives in fast-paced environments and excels in communicating effectively with cross-functional teams. Her proactive approach to problem-solving, willingness to mentor junior developers, and eagerness to learn from others make her a valuable asset to any development team.",
+    "rating": 5,
+    "featured": true,
+    "created_date": "2026-08-20",
+    "order": 4
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 8,
+  "fields": {
+    "name": "Smit M",
+    "title": "Python Developer",
+    "company": "Arkay Apps",
+    "avatar": "",
+    "content": "It was a pleasure collaborating with Pooja on several projects. Her exceptional problem-solving skills and quick learning ability were evident in every task she undertook. Pooja's proficiency in Python programming, coupled with her logical approach, consistently delivered outstanding results. Her strong communication skills further enhanced our team's efficiency and effectiveness. I highly recommend Pooja for her remarkable talents and contributions.",
+    "rating": 5,
+    "featured": true,
+    "created_date": "2026-08-20",
+    "order": 5
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 9,
+  "fields": {
+    "name": "Mitalba Mokarshi",
+    "title": "Python Developer",
+    "company": "Arkay Apps",
+    "avatar": "",
+    "content": "I highly recommend Pooja Chande, who not only excels in her role but has also been instrumental in providing me with invaluable training. Her exceptional work ethic, attention to detail, and innovative problem-solving skills make her an outstanding team player. Her patience, expertise, and willingness to share knowledge have significantly contributed to my professional growth. I highly appreciate her mentorship and the positive impact it has had on my skills and performance.",
+    "rating": 5,
+    "featured": true,
+    "created_date": "2026-08-20",
+    "order": 6
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 10,
+  "fields": {
+    "name": "Harsh Gor",
+    "title": "Senior Python Developer",
+    "company": "Arkay Apps",
+    "avatar": "",
+    "content": "Pooja, who I had the pleasure of managing directly in our dynamic software development team, is a highly skilled Python developer who has significantly contributed to our projects.\n\nDuring her time with us, Pooja demonstrated exceptional expertise in creating robust backend APIs and web applications. Her coding skills and attention to detail have consistently resulted in high-quality, efficient, and scalable solutions. Pooja's ability to navigate complex technical challenges and deliver results promptly has greatly benefited our team and projects.\n\nOne of Pooja's standout qualities is her quick learning ability. She has consistently shown a remarkable aptitude for picking up new technologies and concepts swiftly. This speaks to her intelligence and reflects her commitment to staying at the forefront of industry trends.\n\nPooja's positive attitude, collaborative nature, and strong communication skills make her a valuable team member. Her dedication to producing high-quality work and her enthusiasm for learning and growing in her role make her an asset to any organization.\n\nI highly recommend Pooja for any Python development role and am confident she will continue to excel and contribute significantly to any team she joins.",
+    "rating": 5,
+    "featured": true,
+    "created_date": "2026-08-20",
+    "order": 7
+  }
+},
+{
+  "model": "portfolio.sociallink",
+  "pk": 1,
+  "fields": {
+    "platform": "GitHub",
+    "url": "https://github.com/PoojaThacker2",
+    "icon": "FaGithub",
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.sociallink",
+  "pk": 2,
+  "fields": {
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/poojachande",
+    "icon": "FaLinkedin",
+    "order": 1
+  }
+},
+{
+  "model": "portfolio.profile",
+  "pk": 1,
+  "fields": {
+    "name": "Pooja Chande",
+    "tagline": "Backend-heavy Full Stack Python Developer",
+    "experience_years": "4.7+ Years Experience",
+    "summary": "Building scalable backend systems using Python, Django, FastAPI and PostgreSQL.",
+    "about_text": "Backend-focused Full Stack Python Developer with 4.7+ years of experience designing scalable web applications, REST APIs and microservices.\n\nExperienced in Django, FastAPI, PostgreSQL, Redis, Celery and Docker.\n\nPassionate about AI Engineering, Generative AI and building intelligent software solutions.\n\nPreviously worked as an Assistant Professor before transitioning into software engineering.",
+    "resume_file": "",
+    "github_username": "PoojaThacker2",
+    "linkedin_url": "https://www.linkedin.com/in/poojachande",
+    "github_url": "https://github.com/PoojaThacker2",
+    "email": "poojachande22@gmail.com"
+  }
+}
+]

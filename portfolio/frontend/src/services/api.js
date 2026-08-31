@@ -1,11 +1,18 @@
 import axios from 'axios';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
 });
+
+// Swagger UI lives alongside the API on the backend (/api/docs/), so derive
+// it from the same configured base URL instead of hardcoding the production
+// host anywhere in the frontend.
+export const apiDocsUrl = `${API_BASE_URL.replace(/\/api\/?$/, '')}/api/docs/`;
 
 export const fetchProfile = () => api.get('/profile/').then(res => res.data);
 
