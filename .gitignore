@@ -1,13 +1,21 @@
 # Python
 venv/
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
 portfolio/backend/staticfiles/
 portfolio/backend/media/
 portfolio/backend/db.sqlite3
-*.env
+*.sqlite3
+
+# Django dumpdata exports / local fixtures — seed_data.py is the source of
+# truth for reproducible demo data, not a raw database export.
+portfolio_data.json
+
+# Env files — real secrets never get committed; an .env.example with
+# placeholders only is fine to track if one is added later.
 .env
+.env.*
+!.env.example
 
 # Node / frontend
 portfolio/frontend/node_modules/

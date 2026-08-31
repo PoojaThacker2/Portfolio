@@ -26,7 +26,7 @@ export default function GitHubSection() {
       .catch(() => {});
   }, []);
 
-  const username = profile?.github_username || 'poojachande';
+  const username = profile?.github_username || 'PoojaThacker2';
 
   return (
     <div className="section-container">

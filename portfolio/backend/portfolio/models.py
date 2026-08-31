@@ -133,7 +133,7 @@ class Profile(models.Model):
     summary = models.TextField(default='Building scalable backend systems using Python, Django, FastAPI and PostgreSQL.')
     about_text = models.TextField(blank=True)
     resume_file = models.FileField(upload_to='resume/', blank=True)
-    github_username = models.CharField(max_length=100, blank=True, default='poojachande')
+    github_username = models.CharField(max_length=100, blank=True, default='PoojaThacker2')
     linkedin_url = models.URLField(blank=True)
     github_url = models.URLField(blank=True)
     email = models.EmailField(blank=True)
