@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'django_filters',
     'corsheaders',
     'portfolio',
+    'blog',
 ]
 
 MIDDLEWARE = [
