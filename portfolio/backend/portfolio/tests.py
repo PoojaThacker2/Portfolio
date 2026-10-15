@@ -1,10 +1,28 @@
+from datetime import date
+
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
 from .models import (
     SkillCategory, Skill, Project, Testimonial, Profile, ContactMessage,
+    calculate_experience_years,
 )
+
+
+class ExperienceYearsCalculationTests(APITestCase):
+    """Fixed dates in, fixed dates out — independent of when the test
+    suite actually runs, unlike testing the live property directly."""
+
+    def test_exactly_two_years_floors_to_one_decimal(self):
+        result = calculate_experience_years(date(2020, 1, 1), today=date(2022, 1, 1))
+        self.assertEqual(result, '2.0+ Years Experience')
+
+    def test_partial_year_floors_down_not_rounds(self):
+        # 2020-01-01 -> 2022-11-01 is ~2.83 years; must read "2.8+", never
+        # "2.9+" — the "+" promises "at least", so rounding up would lie.
+        result = calculate_experience_years(date(2020, 1, 1), today=date(2022, 11, 1))
+        self.assertEqual(result, '2.8+ Years Experience')
 
 
 class ProfileEndpointTests(APITestCase):
@@ -18,6 +36,20 @@ class ProfileEndpointTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['name'], 'Test Person')
         self.assertEqual(response.data['email'], 'test@example.com')
+
+    def test_experience_years_is_derived_from_career_start_date(self):
+        Profile.objects.create(
+            name='Test Person', email='test@example.com',
+            career_start_date=date(2020, 1, 1),
+        )
+        response = self.client.get(reverse('profile-detail'))
+        expected = calculate_experience_years(date(2020, 1, 1))
+        self.assertEqual(response.data['experience_years'], expected)
+
+    def test_career_start_date_is_not_exposed_on_the_public_api(self):
+        Profile.objects.create(name='Test Person', email='test@example.com')
+        response = self.client.get(reverse('profile-detail'))
+        self.assertNotIn('career_start_date', response.data)
 
 
 class SkillsEndpointTests(APITestCase):

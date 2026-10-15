@@ -7,7 +7,7 @@ const highlights = [
   {
     icon: HiCode,
     title: 'Backend Engineering',
-    description: '4.7+ years designing REST APIs and microservices with Django and FastAPI',
+    description: 'Designing REST APIs and microservices with Django and FastAPI',
   },
   {
     icon: HiServer,
@@ -59,7 +59,7 @@ export default function About() {
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed whitespace-pre-line">
               {profile?.about_text ||
-                "I'm a Python Backend Engineer with 4.7+ years of experience designing and building scalable APIs, microservices and backend systems for production applications.\n\nMy work spans Django, FastAPI, PostgreSQL, Redis, Celery and Docker, with a focus on system design, performance, reliability and maintainable architecture.\n\nI enjoy solving problems involving distributed systems, asynchronous processing, caching, multi-tenant architecture and API scalability.\n\nPreviously worked as an Assistant Professor before transitioning into software engineering."}
+                "I'm a Python Backend Engineer with hands-on experience designing and building scalable APIs, microservices and backend systems for production applications.\n\nMy work spans Django, FastAPI, PostgreSQL, Redis, Celery and Docker, with a focus on system design, performance, reliability and maintainable architecture.\n\nI enjoy solving problems involving distributed systems, asynchronous processing, caching, multi-tenant architecture and API scalability.\n\nPreviously worked as an Assistant Professor before transitioning into software engineering."}
             </p>
           </div>
         </motion.div>

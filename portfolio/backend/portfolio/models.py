@@ -1,4 +1,20 @@
+import math
+from datetime import date
+
 from django.db import models
+
+
+def calculate_experience_years(start_date, today=None):
+    """Pure function so the date math is independently testable with fixed
+    dates, rather than only via the live `date.today()` wired into the
+    serializer. Floors to 1 decimal place (not rounds) so the trailing "+"
+    stays honest — it should always read as "at least this many years",
+    never round up past what's actually true yet."""
+    today = today or date.today()
+    days = (today - start_date).days
+    years = math.floor((days / 365.25) * 10) / 10
+    return f'{years:.1f}+ Years Experience'
+
 
 class SkillCategory(models.Model):
     name = models.CharField(max_length=100)
@@ -129,7 +145,10 @@ class SocialLink(models.Model):
 class Profile(models.Model):
     name = models.CharField(max_length=200, default='Pooja Chande')
     tagline = models.CharField(max_length=300, default='Backend-heavy Full Stack Python Developer')
-    experience_years = models.CharField(max_length=50, default='4.5+ Years Experience')
+    career_start_date = models.DateField(
+        default=date(2022, 1, 1),
+        help_text="Used to compute the 'X.Y+ Years Experience' figure shown on the site — update this once if it's ever wrong, and the displayed number takes care of itself from then on.",
+    )
     summary = models.TextField(default='Building scalable backend systems using Python, Django, FastAPI and PostgreSQL.')
     about_text = models.TextField(blank=True)
     resume_file = models.FileField(upload_to='resume/', blank=True)
@@ -143,3 +162,7 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def experience_years(self):
+        return calculate_experience_years(self.career_start_date)

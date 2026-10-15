@@ -70,4 +70,5 @@ class SocialLinkAdmin(admin.ModelAdmin):
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ['name', 'tagline', 'email']
+    list_display = ['name', 'tagline', 'career_start_date', 'experience_years', 'email']
+    readonly_fields = ['experience_years']

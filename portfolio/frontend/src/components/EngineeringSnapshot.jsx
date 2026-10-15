@@ -25,7 +25,7 @@ export default function EngineeringSnapshot() {
       >
         <div className="shrink-0">
           <p className="text-3xl sm:text-4xl font-bold gradient-text leading-none">
-            {profile?.experience_years || '4.7+ Years'}
+            {profile?.experience_years || '4+ Years'}
           </p>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-1.5">
             Backend Engineering Experience

@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.core.management.base import BaseCommand
 from portfolio.models import (
     Profile, SkillCategory, Skill, Experience,
@@ -23,10 +25,10 @@ class Command(BaseCommand):
             name='Pooja Chande',
             defaults={
                 'tagline': 'Senior Python Backend Engineer',
-                'experience_years': '4.7+ Years Experience',
+                'career_start_date': date(2022, 1, 1),
                 'summary': 'Building scalable APIs, microservices and production-grade backend systems with Python.',
                 'about_text': (
-                    "I'm a Python Backend Engineer with 4.7+ years of experience designing and "
+                    "I'm a Python Backend Engineer with hands-on experience designing and "
                     'building scalable APIs, microservices and backend systems for production '
                     'applications.\n\n'
                     'My work spans Django, FastAPI, PostgreSQL, Redis, Celery and Docker, with a '
